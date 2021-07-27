@@ -27,4 +27,5 @@ public class BayApplication {
 //		
 //		return sessionFactory.getObject();
 //	}
+	//tests
 }
