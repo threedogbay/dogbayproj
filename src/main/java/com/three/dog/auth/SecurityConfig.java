@@ -16,7 +16,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
+
 @EnableWebSecurity // Spring Security를 활성화한다는 의미의 어노테이션
 @Configuration // spring security 환경설정 클래스 라는 의미의 어노테이션
 public class SecurityConfig extends WebSecurityConfigurerAdapter { //WebSecurityConfigurerAdapter는 Spring Security의 설정파일로서의 역할을 하기 위해 상속해야 하는 클래스
@@ -31,7 +31,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { //WebSecurity
     protected void configure(HttpSecurity http) throws Exception { // WebSecurityConfigurerAdapter를 상속받으면 오버라이드 가능
 	    http.authorizeRequests() // 접근에 대한 인증 설정이 가능합니다.
 	    		// 페이지 권한 설정// permitAll() 누구나 접근 허용
-	            .antMatchers("/").permitAll() //인증되지 않은, 로그인이 되지 않은 사용자만 접근 가능
+	            .antMatchers("/**").permitAll()
+	            .antMatchers("/**/**").permitAll()//인증되지 않은, 로그인이 되지 않은 사용자만 접근 가능
 				.anyRequest().authenticated()                // 나머지 요청들은 권한의 종류에 상관 없이 권한이 있어야 접근 가능 authenticated() : 권한이 있으면 무조건 접근 가능
 												             // hasRole(user or admin) : 특정 권한이 있는 사람만 접근 가능
 			.and() // 로그인 설정
