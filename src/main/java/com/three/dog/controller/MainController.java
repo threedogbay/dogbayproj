@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class MemberController {
+public class MainController {
 	
 //	private final static Logger log = LoggerFactory.getLogger(null);
 	
 	@RequestMapping(value="/")
-	public String main(Model model) {
+	public String main() {
 		return "login";
 	}
 	
