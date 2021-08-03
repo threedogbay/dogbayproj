@@ -15,58 +15,57 @@ import lombok.Setter;
 public class MemberVO implements UserDetails{
 
 	
-	private String memberid;
-	private String memberpw;
-	private String email;
-	private String auth;
+	private String member_id;
+	private String member_pwd;
+	private String member_name;
+	private String member_auth;
 	
 	
-	public String getMemberid() {
-		return memberid;
+	public String getMember_id() {
+		return member_id;
 	}
-	public void setMemberid(String memberid) {
-		this.memberid = memberid;
+	public void setMember_id(String member_id) {
+		this.member_id = member_id;
 	}
-	public String getMemberpw() {
-		return memberpw;
+	public String getMember_pwd() {
+		return member_pwd;
 	}
-	public void setMemberpw(String memberpw) {
-		this.memberpw = memberpw;
+	public void setMember_pwd(String member_pwd) {
+		this.member_pwd = member_pwd;
 	}
-	public String getEmail() {
-		return email;
+	public String getMember_name() {
+		return member_name;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMember_name(String member_name) {
+		this.member_name = member_name;
 	}
-	public String getAuth() {
-		return auth;
+	public String getMember_auth() {
+		return member_auth;
 	}
-	public void setAuth(String auth) {
-		this.auth = auth;
+	public void setMember_auth(String member_auth) {
+		this.member_auth = member_auth;
 	}
-	
 	public MemberVO(String memberid, String memberpw, String email, String auth) {
-		this.memberid = memberid;
-		this.memberpw = memberpw;
-		this.email = email;
-		this.auth = auth;
+		this.member_id = memberid;
+		this.member_pwd = memberpw;
+		this.member_name = email;
+		this.member_auth = auth;
 	}
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		Set<GrantedAuthority> roles = new HashSet<>();
-		for(String role : auth.split(",")) {
+		for(String role : member_auth.split(",")) {
 			roles.add(new SimpleGrantedAuthority(role));
 		}
 		return roles;
 	}
 	@Override
 	public String getPassword() {
-		return memberpw;
+		return member_pwd;
 	}
 	@Override
 	public String getUsername() {
-		return memberid;
+		return member_id;
 	}
 	@Override
 	public boolean isAccountNonExpired() { //계정 만료 여부 반환
