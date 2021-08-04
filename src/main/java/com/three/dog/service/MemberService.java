@@ -45,9 +45,6 @@ public class MemberService implements UserDetailsService{
 			log.debug("## 계정 정보가 존재하지 않습니다. ##");
 			throw new UsernameNotFoundException("사용자가 입력한 아이디를 찾을 수 없습니다.");
 		}
-		
-		
-		
 		return vo;
 	}
 
