@@ -1,6 +1,7 @@
 # dogbayproj
 
---payment table
+
+-- payment table
 CREATE TABLE `threedog`.`payment` (
   `payment_id` INT NOT NULL,
   `member_id` VARCHAR(45) NULL,
@@ -11,7 +12,7 @@ CREATE TABLE `threedog`.`payment` (
   `payment_status` INT NULL,
   PRIMARY KEY (`payment_id`));
 
---  auction table
+-- auction table
 CREATE TABLE `threedog`.`auction` (
   `auction_id` INT NOT NULL,
   `member_id` VARCHAR(45) NULL,
@@ -21,7 +22,7 @@ CREATE TABLE `threedog`.`auction` (
   `auction_soldprice` INT NULL,
   PRIMARY KEY (`auction_id`));
 
---like_tb
+-- like_tb
 CREATE TABLE `threedog`.`like_tb` (
   `member_id` VARCHAR(45) NOT NULL,
   `product_id` VARCHAR(45) NOT NULL,
@@ -29,7 +30,7 @@ CREATE TABLE `threedog`.`like_tb` (
    ,
   PRIMARY KEY (`member_id`, `product_id`));
 
---member table
+-- member table
 CREATE TABLE `threedog`.`member` (
   `member_id` VARCHAR(45) NOT NULL,
   `member_pwd` VARCHAR(45) NULL,
@@ -37,8 +38,7 @@ CREATE TABLE `threedog`.`member` (
   `member_auth` VARCHAR(45) NULL,
   PRIMARY KEY (`member_id`));
 
---product table
-
+-- product table
 CREATE TABLE `threedog`.`product` (
   `product_id` INT NOT NULL,
   `product_name` VARCHAR(45) NULL,
@@ -53,3 +53,4 @@ CREATE TABLE `threedog`.`product` (
 
 -- product insert test
 INSERT INTO `threedog`.`product` (`product_id`, `product_name`, `product_initprice`, `product_closedate`, `product_regidate`, `product_img`, `product_detail`) VALUES ('1', 'test', '1000', '2020-08-08', '2020-08-08', 'test', 'test');
+
