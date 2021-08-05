@@ -45,12 +45,7 @@ public class MemberVO implements UserDetails{
 	public void setMember_auth(String member_auth) {
 		this.member_auth = member_auth;
 	}
-	public MemberVO(String memberid, String memberpw, String email, String auth) {
-		this.member_id = memberid;
-		this.member_pwd = memberpw;
-		this.member_name = email;
-		this.member_auth = auth;
-	}
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		Set<GrantedAuthority> roles = new HashSet<>();

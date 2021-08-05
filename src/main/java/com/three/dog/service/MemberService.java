@@ -35,7 +35,7 @@ public class MemberService implements UserDetailsService{
 	   */
 
 	@Override // 기본적인 반환 타입은 UserDetails, UserDetails를 상속받은 UserVO로 반환 타입 지정 (자동으로 다운 캐스팅됨)
-	public UserDetails loadUserByUsername(String memberid) throws UsernameNotFoundException {
+	public UserDetails loadUserByUsername(MemberVO vo) throws UsernameNotFoundException {
 		// 시큐리티에서 지정한 서비스이기 때문에 이 메소드를 필수로 구현
 		log.info("## loadUserByUsername ##");
 
@@ -46,6 +46,11 @@ public class MemberService implements UserDetailsService{
 			throw new UsernameNotFoundException("사용자가 입력한 아이디를 찾을 수 없습니다.");
 		}
 		return vo;
+	}
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

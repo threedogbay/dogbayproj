@@ -37,13 +37,13 @@
                             <div class="login_part_form_iner">
                                 <h3>Welcome Back ! <br>
                                     Please Sign in now</h3>
-                                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                                <form class="row contact_form" action="/login" method="post" novalidate="novalidate">
                                     <div class="col-md-12 form-group p_star">
-                                        <input type="text" class="form-control" id="name" name="name" value=""
-                                            placeholder="Username">
+                                        <input type="text" class="form-control" id="member_id" name="member_id" value=""
+                                            placeholder="ID">
                                     </div>
                                     <div class="col-md-12 form-group p_star">
-                                        <input type="password" class="form-control" id="password" name="password" value=""
+                                        <input type="password" class="form-control" id="member_pw" name="member_pw" value=""
                                             placeholder="Password">
                                     </div>
                                     <div class="col-md-12 form-group">
