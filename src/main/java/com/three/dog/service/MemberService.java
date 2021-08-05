@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.three.dog.domain.MemberDTO;
+
 import com.three.dog.domain.MemberVO;
 import com.three.dog.repository.MemberRepository;
 
