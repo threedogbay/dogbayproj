@@ -50,4 +50,9 @@ CREATE TABLE `threedog`.`product` (
   `product_soldout` CHAR(1) CHECK(PRODUCT_SOLDOUT IN('Y', 'N')) DEFAULT 'N' 
    ,
   PRIMARY KEY (`product_id`));
+
+-- product insert test
+INSERT INTO `threedog`.`product` (`product_id`, `product_name`, `product_initprice`, `product_closedate`, `product_regidate`, `product_img`, `product_detail`) VALUES ('1', 'test', '1000', '2020-08-08', '2020-08-08', 'test', 'test');
+
 ```
+

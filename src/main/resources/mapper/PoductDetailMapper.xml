@@ -3,6 +3,7 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.three.dog.repository">
+	
 	<select id="showProductDetail" resultType="com.three.dog.domain.ProductVO">
 		SELECT
 			product_id
