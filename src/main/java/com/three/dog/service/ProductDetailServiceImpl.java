@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.three.dog.domain.ProductVO;
 import com.three.dog.repository.ProductDetailRepository;
+import com.three.dog.repository.ProductDetailRepositoryImpl;
 
 @Service
 public class ProductDetailServiceImpl implements ProductDetailService {
