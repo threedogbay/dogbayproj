@@ -1,6 +1,5 @@
 # dogbayproj
 
-
 -- payment table
 CREATE TABLE `threedog`.`payment` (
   `payment_id` INT NOT NULL,
@@ -53,4 +52,3 @@ CREATE TABLE `threedog`.`product` (
 
 -- product insert test
 INSERT INTO `threedog`.`product` (`product_id`, `product_name`, `product_initprice`, `product_closedate`, `product_regidate`, `product_img`, `product_detail`) VALUES ('1', 'test', '1000', '2020-08-08', '2020-08-08', 'test', 'test');
-

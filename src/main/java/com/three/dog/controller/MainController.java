@@ -5,10 +5,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.three.dog.domain.MemberVO;
+import com.three.dog.service.MemberService;
 
 @Controller
 public class MainController {
@@ -17,15 +21,14 @@ public class MainController {
 	
 	@RequestMapping(value="/")
 	public String main() {
-		return "login";
+		return "user/login";
 	}
 	
-//	@RequestMapping(value="login")
-//	public ModelAndView mLogin(@RequestParam("id") String id, @RequestParam("pw") String pw, Model model) {
-//		
-//		
-//		return null;
-//	}
+	@RequestMapping(value="login")
+	public ModelAndView mLogin(@ModelAttribute MemberVO vo) {
+		
+		return null;
+	}
 	
 	@GetMapping(value="/{path1}")
 	public String path1(@PathVariable("path1") String path1
