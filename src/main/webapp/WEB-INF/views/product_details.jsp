@@ -1,3 +1,4 @@
+<%@ page contentType = "text/html;charset=utf-8" %>
 <%@include file = "layout/header.jsp" %>
 <!doctype html>
 <html lang="zxx">
@@ -37,23 +38,25 @@
                 </div>
                 <div class="col-lg-8">
                 <div class="single_product_text text-center">
-                    <h3>Foam filling cotton slow <br>
-                        rebound pillows</h3>
+                    <h3>제품명</h3>
+                    
                     <p>
-                        Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources. Credibly innovate granular internal or “organic” sources whereas high standards in web-readiness. Credibly innovate granular internal or organic sources whereas high standards in web-readiness. Energistically scale future-proof core competencies vis-a-vis impactful experiences. Dramatically synthesize integrated schemas. with optimal networks.
+                        제품 설명이 어쩌구 저쩌구
                     </p>
+                    <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Black_Pink_logo_%282%29.png/300px-Black_Pink_logo_%282%29.png">
                     <div class="card_area">
                         <div class="product_count_area">
-                            <p>Quantity</p>
+                            <p>입찰금액</p>
                             <div class="product_count d-inline-block">
                                 <span class="product_count_item inumber-decrement"> <i class="ti-minus"></i></span>
                                 <input class="product_count_item input-number" type="text" value="1" min="0" max="10">
                                 <span class="product_count_item number-increment"> <i class="ti-plus"></i></span>
                             </div>
-                            <p>$5</p>
+                            
                         </div>
+                        <p>x,xxx원 이상 입찰 가능</p>
                     <div class="add_to_cart">
-                        <a href="#" class="btn_3">add to cart</a>
+                        <a href="#" class="btn_3">입찰하기</a>
                     </div>
                     </div>
                 </div>
@@ -69,7 +72,7 @@
                     <div class="col-lg-8">
                         <div class="subscribe_part_content">
                             <h2>Get promotions & updates!</h2>
-                            <p>Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources credibly innovate granular internal .</p>
+                            <p>Seamlessly empower fully researched growth strategies and interoperable internal or âorganicâ sources credibly innovate granular internal .</p>
                             <div class="subscribe_form">
                                 <input type="email" placeholder="Enter your mail">
                                 <a href="#" class="btn_1">Subscribe</a>
