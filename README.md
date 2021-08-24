@@ -1,5 +1,4 @@
 # dogbayproj
-
 ```
 -- payment table
 CREATE TABLE `threedog`.`payment` (
@@ -53,6 +52,25 @@ CREATE TABLE `threedog`.`product` (
 
 -- product insert test
 INSERT INTO `threedog`.`product` (`product_id`, `product_name`, `product_initprice`, `product_closedate`, `product_regidate`, `product_img`, `product_detail`) VALUES ('1', 'test', '1000', '2020-08-08', '2020-08-08', 'test', 'test');
-
 ```
 
+#application.properties
+```
+server.port=8082
+server.servlet.context-path=/
+
+#jsp
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+
+#mysql 
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/threedog?serverTimeZone=UTC&CharacterEncoding=UTF-8
+spring.datasource.username=root
+spring.datasource.password=1234
+mybatis.mapper-locations:classpath:mapper/*.xml
+
+server.servlet.encoding.charset=utf-8
+server.servlet.encoding.enabled=true
+server.servlet.encoding.force=true
+```
