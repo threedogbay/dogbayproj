@@ -24,12 +24,6 @@ public class MainController {
 		return "user/login";
 	}
 	
-	@RequestMapping(value="login")
-	public ModelAndView mLogin(@ModelAttribute MemberVO vo) {
-		
-		return null;
-	}
-	
 	@GetMapping(value="/{path1}")
 	public String path1(@PathVariable("path1") String path1
 			) {
@@ -44,5 +38,7 @@ public class MainController {
 	}
 	//nkfdjnksalnfdklsanfkdlsanfkldsnk
 	//rrrr
+	
+	
 
 }

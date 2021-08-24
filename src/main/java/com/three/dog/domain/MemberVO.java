@@ -1,5 +1,6 @@
 package com.three.dog.domain;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -16,9 +17,9 @@ public class MemberVO implements UserDetails{
 
 	
 	private String member_id;
-	private String member_pwd;
+	private String member_pw;
 	private String member_name;
-	private String member_auth;
+	private String auth;
 	
 	
 	public String getMember_id() {
@@ -27,11 +28,11 @@ public class MemberVO implements UserDetails{
 	public void setMember_id(String member_id) {
 		this.member_id = member_id;
 	}
-	public String getMember_pwd() {
-		return member_pwd;
+	public String getMember_pw() {
+		return member_pw;
 	}
-	public void setMember_pwd(String member_pwd) {
-		this.member_pwd = member_pwd;
+	public void setMember_pw(String member_pwd) {
+		this.member_pw = member_pwd;
 	}
 	public String getMember_name() {
 		return member_name;
@@ -39,29 +40,22 @@ public class MemberVO implements UserDetails{
 	public void setMember_name(String member_name) {
 		this.member_name = member_name;
 	}
-	public String getMember_auth() {
-		return member_auth;
+	public String getAuth() {
+		return auth;
 	}
-	public void setMember_auth(String member_auth) {
-		this.member_auth = member_auth;
+	public void setAuth(String auth) {
+		this.auth = auth;
 	}
-	public MemberVO(String memberid, String memberpw, String email, String auth) {
-		this.member_id = memberid;
-		this.member_pwd = memberpw;
-		this.member_name = email;
-		this.member_auth = auth;
-	}
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		Set<GrantedAuthority> roles = new HashSet<>();
-		for(String role : member_auth.split(",")) {
-			roles.add(new SimpleGrantedAuthority(role));
-		}
-		return roles;
+		ArrayList<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+		authorities.add(new SimpleGrantedAuthority(auth));
+		return authorities;
 	}
 	@Override
 	public String getPassword() {
-		return member_pwd;
+		return member_pw;
 	}
 	@Override
 	public String getUsername() {

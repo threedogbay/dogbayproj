@@ -3,14 +3,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.three.dog.repository"><!-- com.three.dog.repository namespace를 통해 MemberDAO와 연결 -->
+<mapper namespace="com.three.dog.mapper.MemberMapper"><!-- com.three.dog.repository namespace를 통해 MemberDAO와 연결 -->
   		
   <select id="selectMembers" parameterType="String" resultType="com.three.dog.domain.MemberVO"><!-- selectUsers()메서드를 호출하면 실행할 SELECT문이며, 
 																												UserDTO 객체를 파라미터로 받아, UserDTO객체를 반환합니다.-->
-  	SELECT member_id, member_pw, email
+  	SELECT member_id, member_pw, auth as member_auth
     FROM Member
-    where member_id = #{member_id}
+    WHERE member_id = #{member_id}
   </select>
+  
+  <insert id="insertMember" parameterType="com.three.dog.domain.MemberVO">
+  	insert into member values ( #{member_id}, #{member_pw}, #{member_name}, #{auth} )
+  </insert>
   
 
 </mapper>
