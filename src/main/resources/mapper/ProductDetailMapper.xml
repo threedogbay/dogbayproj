@@ -12,4 +12,7 @@
 		WHERE
 			product_id = 1
 	</select>
-</mapper>
+	<select id="getAuctionList" resultType="com.three.dog.domain.AuctionVO">
+	
+	</select>
+</mapper> 

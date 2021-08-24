@@ -37,13 +37,13 @@
                             <div class="login_part_form_iner">
                                 <h3>Welcome Back ! <br>
                                     Please Sign in now</h3>
-                                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                                <form class="row contact_form" action="/login" method="POST" > <!-- novalidate="novalidate"  -->
                                     <div class="col-md-12 form-group p_star">
-                                        <input type="text" class="form-control" id="name" name="name" value=""
-                                            placeholder="Username">
+                                        <input type="text" class="form-control" id="member_id" name="username" value=""
+                                            placeholder="ID">
                                     </div>
                                     <div class="col-md-12 form-group p_star">
-                                        <input type="password" class="form-control" id="password" name="password" value=""
+                                        <input type="password" class="form-control" id="member_pw" name="password" value=""
                                             placeholder="Password">
                                     </div>
                                     <div class="col-md-12 form-group">
@@ -51,9 +51,9 @@
                                             <input type="checkbox" id="f-option" name="selector">
                                             <label for="f-option">Remember me</label>
                                         </div>
-                                        <button type="submit" value="submit" class="btn_3">
-                                            log in
-                                        </button>
+                                        <input type="submit" value="log in" class="btn_3"/>
+                                            
+                                        
                                         <a class="lost_pass" href="#">forget password?</a>
                                     </div>
                                 </form>

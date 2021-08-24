@@ -1,20 +1,28 @@
 package com.three.dog.service;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 
 import com.three.dog.domain.MemberVO;
+import com.three.dog.domain.MemberVO2;
 import com.three.dog.repository.MemberRepository;
 
 
@@ -24,6 +32,10 @@ public class MemberService implements UserDetailsService{
 	
 	@Autowired
 	private MemberRepository memberRepository;
+
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	
 	Logger log = LoggerFactory.getLogger(this.getClass());
 	/**
@@ -38,14 +50,53 @@ public class MemberService implements UserDetailsService{
 	public UserDetails loadUserByUsername(String memberid) throws UsernameNotFoundException {
 		// 시큐리티에서 지정한 서비스이기 때문에 이 메소드를 필수로 구현
 		log.info("## loadUserByUsername ##");
-
-		MemberVO vo = memberRepository.selectId(memberid);
 		
+		MemberVO members = memberRepository.selectId(memberid);
+		
+		List<GrantedAuthority> authorities = new ArrayList<>();
+		authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+		
+		return new User(members.getMember_id(), members.getMember_pw(), authorities);
+
+//		MemberVO2 securityUser = new MemberVO2();
+//				
+//		MemberVO userVo = memberRepository.selectId(memberid);
+//		
+//		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+//		String encodedPassword = passwordEncoder.encode(userVo.getPassword());
+//		
+//		System.out.println(encodedPassword);
+//		
+//		log.info("## 되나 ##");
+//		
+//		if ( userVo != null ) {
+//            securityUser.setName(userVo.getMember_name());         
+//            securityUser.setUsername(userVo.getMember_id());     // principal
+//            //securityUser.setPassword(userVo.getPassword());  // credetial
+//            securityUser.setPassword(encodedPassword);  	
+//            
+//            List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+//            authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+//
+//            securityUser.setAuthorities(authorities);
+//        }
+//
+//        return securityUser; // 여기서 return된 UserDetails는 SecurityContext의 Authentication에 등록되어 인증 정보를 갖고 있는다.
+		/*
 		if(vo == null) {
 			log.debug("## 계정 정보가 존재하지 않습니다. ##");
 			throw new UsernameNotFoundException("사용자가 입력한 아이디를 찾을 수 없습니다.");
 		}
-		return vo;
+//		return vo;
+ * 
+ */
 	}
+	
+	
+	public void save(MemberVO member) {
+		member.setMember_pw(passwordEncoder.encode(member.getMember_pw()));
+		memberRepository.save(member);
+	}
+	
 
 }

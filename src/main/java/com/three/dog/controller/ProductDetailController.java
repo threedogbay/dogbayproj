@@ -1,5 +1,7 @@
 package com.three.dog.controller;
 
+import java.awt.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,7 @@ public class ProductDetailController {
 		
 		if(prodid != null) {
 			ProductVO vo = productService.showProductDetail(prodid);
+			model.addAttribute("listAuction", productService.getAuctionList(prodid));
 			System.out.println(vo.toString());
 		}
 		
