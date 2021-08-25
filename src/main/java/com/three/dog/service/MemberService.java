@@ -51,12 +51,17 @@ public class MemberService implements UserDetailsService{
 		// 시큐리티에서 지정한 서비스이기 때문에 이 메소드를 필수로 구현
 		log.info("## loadUserByUsername ##");
 		
-		MemberVO members = memberRepository.selectId(memberid);
+		MemberVO members = null;
+		try {
+			members = memberRepository.selectId(memberid);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		List<GrantedAuthority> authorities = new ArrayList<>();
 		authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
 		
-		return new User(members.getMember_id(), members.getMember_pw(), authorities);
+		return new User(members.getMember_id(), members.getMember_pwd(), authorities);
 
 //		MemberVO2 securityUser = new MemberVO2();
 //				
@@ -93,9 +98,15 @@ public class MemberService implements UserDetailsService{
 	}
 	
 	
-	public void save(MemberVO member) {
-		member.setMember_pw(passwordEncoder.encode(member.getMember_pw()));
-		memberRepository.save(member);
+	public void signUp(MemberVO vo) throws Exception {
+		vo.setMember_pwd(passwordEncoder.encode(vo.getMember_pwd()));
+		memberRepository.signUp(vo);
+	}
+
+
+	public int idChk(MemberVO vo) throws Exception {
+		int result = memberRepository.idChk(vo);
+		return result;
 	}
 	
 

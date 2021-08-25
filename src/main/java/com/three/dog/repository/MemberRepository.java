@@ -12,11 +12,21 @@ public class MemberRepository {
 	@Autowired
 	private MemberMapper memberMapper;
 	
-	public MemberVO selectId(String memberid) {
+	//로그인
+	public MemberVO selectId(String memberid) throws Exception {
 		return memberMapper.selectMembers(memberid);
 	}
 
-	public void save(MemberVO member) {
-		memberMapper.insertMember(member);
+	//회원가입
+	public void signUp(MemberVO vo) throws Exception {
+		memberMapper.insertMember(vo);
 	}
+	
+	//아이디 중복체크
+	public int idChk(MemberVO vo) throws Exception {
+		int result = memberMapper.idChk(vo);
+		return result;
+	}
+
+	
 }

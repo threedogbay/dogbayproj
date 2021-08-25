@@ -7,14 +7,19 @@
   		
   <select id="selectMembers" parameterType="String" resultType="com.three.dog.domain.MemberVO"><!-- selectUsers()메서드를 호출하면 실행할 SELECT문이며, 
 																												UserDTO 객체를 파라미터로 받아, UserDTO객체를 반환합니다.-->
-  	SELECT member_id, member_pw, auth as member_auth
+  	SELECT member_id, member_pwd, auth as member_auth
     FROM Member
     WHERE member_id = #{member_id}
   </select>
   
   <insert id="insertMember" parameterType="com.three.dog.domain.MemberVO">
-  	insert into member values ( #{member_id}, #{member_pw}, #{member_name}, #{auth} )
+  	insert into member(member_id, member_pwd, member_name) values ( #{member_id}, #{member_pwd}, #{member_name})
   </insert>
   
-
+  <select id="idchk" resultType="int">
+  	SELECT COUNT(*)
+  	FROM member
+  	WHERE member_id = #{member_id}
+  </select>
+  
 </mapper>

@@ -37,6 +37,12 @@ CREATE TABLE `threedog`.`member` (
   `member_auth` VARCHAR(45) NULL,
   PRIMARY KEY (`member_id`));
 
+-- `member_pwd` change varchar(500)
+ALTER TABLE `member` CHANGE `MEMBER_PW` `MEMBER_PWD` VARCHAR(500);
+  
+-- `member_auth` modify default 'ROLE_USER'
+ALTER TABLE `threedog`.`member` MODIFY `member_auth` VARCHAR(20) DEFAULT 'ROLE_USER'; 
+
 -- product table
 CREATE TABLE `threedog`.`product` (
   `product_id` INT NOT NULL,

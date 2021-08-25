@@ -55,6 +55,10 @@
                                             
                                         
                                         <a class="lost_pass" href="#">forget password?</a>
+                                        
+                                        <button>
+                                        	<a href="/user/signup">회원가입</a>
+                                        </button>
                                     </div>
                                 </form>
                             </div>

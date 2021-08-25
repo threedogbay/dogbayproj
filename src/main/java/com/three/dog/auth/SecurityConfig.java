@@ -39,12 +39,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { //WebSecurity
 	    http.authorizeRequests() // 접근에 대한 인증 설정이 가능합니다.
 	    		// 페이지 권한 설정// permitAll() 누구나 접근 허용
 	            .antMatchers("/user/**").permitAll()//인증되지 않은, 로그인이 되지 않은 사용자만 접근 가능
-	            .antMatchers("/afterauth/**").hasRole("USER")
+	            .antMatchers("/**").hasRole("USER")
 				.anyRequest().authenticated()                // 나머지 요청들은 권한의 종류에 상관 없이 권한이 있어야 접근 가능 authenticated() : 권한이 있으면 무조건 접근 가능
 												             // hasRole(user or admin) : 특정 권한이 있는 사람만 접근 가능
 			.and() // 로그인 설정
 	          .formLogin()// 로그인에 관한 설정을 의미 로그인 성공시 '/'로 리다이렉트
-	          .loginPage("/user/login")
+	          .loginPage("/")
 	          .loginProcessingUrl("/login")
 	          .defaultSuccessUrl("/index")
 	          
