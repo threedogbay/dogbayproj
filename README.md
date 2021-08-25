@@ -43,6 +43,9 @@ ALTER TABLE `member` CHANGE `MEMBER_PW` `MEMBER_PWD` VARCHAR(500);
 -- `member_auth` modify default 'ROLE_USER'
 ALTER TABLE `threedog`.`member` MODIFY `member_auth` VARCHAR(20) DEFAULT 'ROLE_USER'; 
 
+-- insert member
+insert into `threedog`.`member`(`member_id`,`member_pwd`,`member_name`) values(#{member_id},#{member_pwd},#{member_name});
+
 -- product table
 CREATE TABLE `threedog`.`product` (
   `product_id` INT NOT NULL,
