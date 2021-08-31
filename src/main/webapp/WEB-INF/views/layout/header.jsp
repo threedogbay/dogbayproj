@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<% String path =  "http://localhost:8085/"; %>
+
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>Watch shop | eCommers</title>
@@ -8,20 +10,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="manifest" href="site.webmanifest">
 <link rel="shortcut icon" type="image/x-icon"
-	href="assets/img/favicon.ico">
+	href="<%=path%>assets/img/favicon.ico">
 
 <!-- CSS here -->
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-<link rel="stylesheet" href="assets/css/flaticon.css">
-<link rel="stylesheet" href="assets/css/slicknav.css">
-<link rel="stylesheet" href="assets/css/animate.min.css">
-<link rel="stylesheet" href="assets/css/magnific-popup.css">
-<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-<link rel="stylesheet" href="assets/css/themify-icons.css">
-<link rel="stylesheet" href="assets/css/slick.css">
-<link rel="stylesheet" href="assets/css/nice-select.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="<%=path%>assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="<%=path%>assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="<%=path%>assets/css/flaticon.css">
+<link rel="stylesheet" href="<%=path%>assets/css/slicknav.css">
+<link rel="stylesheet" href="<%=path%>assets/css/animate.min.css">
+<link rel="stylesheet" href="<%=path%>assets/css/magnific-popup.css">
+<link rel="stylesheet" href="<%=path%>assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="<%=path%>assets/css/themify-icons.css">
+<link rel="stylesheet" href="<%=path%>assets/css/slick.css">
+<link rel="stylesheet" href="<%=path%>assets/css/nice-select.css">
+<link rel="stylesheet" href="<%=path%>assets/css/style.css">
+
 </head>
 <body>
 	<header>
@@ -32,7 +35,7 @@
 					<div class="menu-wrapper">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="index"><img src="assets/img/logo/logo.png" alt=""></a>
+							<a href="index"><img src="<%=path%>assets/img/logo/logo.png" alt=""></a>
 						</div>
 						<!-- Main-menu -->
 						<div class="main-menu d-none d-lg-block">
@@ -89,37 +92,37 @@
 
 	<!-- JS here -->
 
-	<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+	<script src="<%=path%>assets/js/vendor/modernizr-3.5.0.min.js"></script>
 	<!-- Jquery, Popper, Bootstrap -->
-	<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-	<script src="./assets/js/popper.min.js"></script>
-	<script src="./assets/js/bootstrap.min.js"></script>
+	<script src="<%=path%>assets/js/vendor/jquery-1.12.4.min.js"></script>
+	<script src="<%=path%>assets/js/popper.min.js"></script>
+	<script src="<%=path%>assets/js/bootstrap.min.js"></script>
 	<!-- Jquery Mobile Menu -->
-	<script src="./assets/js/jquery.slicknav.min.js"></script>
+	<script src="<%=path%>assets/js/jquery.slicknav.min.js"></script>
 
 	<!-- Jquery Slick , Owl-Carousel Plugins -->
-	<script src="./assets/js/owl.carousel.min.js"></script>
-	<script src="./assets/js/slick.min.js"></script>
+	<script src="<%=path%>assets/js/owl.carousel.min.js"></script>
+	<script src="<%=path%>assets/js/slick.min.js"></script>
 
 	<!-- One Page, Animated-HeadLin -->
-	<script src="./assets/js/wow.min.js"></script>
-	<script src="./assets/js/animated.headline.js"></script>
+	<script src="<%=path%>assets/js/wow.min.js"></script>
+	<script src="<%=path%>assets/js/animated.headline.js"></script>
 
 	<!-- Scroll up, nice-select, sticky -->
-	<script src="./assets/js/jquery.scrollUp.min.js"></script>
-	<script src="./assets/js/jquery.nice-select.min.js"></script>
-	<script src="./assets/js/jquery.sticky.js"></script>
-	<script src="./assets/js/jquery.magnific-popup.js"></script>
+	<script src="<%=path%>assets/js/jquery.scrollUp.min.js"></script>
+	<script src="<%=path%>assets/js/jquery.nice-select.min.js"></script>
+	<script src="<%=path%>assets/js/jquery.sticky.js"></script>
+	<script src="<%=path%>assets/js/jquery.magnific-popup.js"></script>
 
 	<!-- contact js -->
-	<script src="./assets/js/contact.js"></script>
-	<script src="./assets/js/jquery.form.js"></script>
-	<script src="./assets/js/jquery.validate.min.js"></script>
-	<script src="./assets/js/mail-script.js"></script>
-	<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+	<script src="<%=path%>assets/js/contact.js"></script>
+	<script src="<%=path%>assets/js/jquery.form.js"></script>
+	<script src="<%=path%>assets/js/jquery.validate.min.js"></script>
+	<script src="<%=path%>assets/js/mail-script.js"></script>
+	<script src="<%=path%>assets/js/jquery.ajaxchimp.min.js"></script>
 
 	<!-- Jquery Plugins, main Jquery -->
-	<script src="./assets/js/plugins.js"></script>
-	<script src="./assets/js/main.js"></script>
+	<script src="<%=path%>assets/js/plugins.js"></script>
+	<script src="<%=path%>assets/js/main.js"></script>
 </body>
 </html>
