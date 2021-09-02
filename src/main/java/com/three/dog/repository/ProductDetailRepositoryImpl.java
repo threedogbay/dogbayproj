@@ -1,8 +1,11 @@
 package com.three.dog.repository;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.three.dog.domain.AuctionVO;
 import com.three.dog.domain.ProductVO;
 import com.three.dog.mappers.ProductDetailMapper;
 
@@ -13,9 +16,21 @@ public class ProductDetailRepositoryImpl implements ProductDetailRepository{
 	ProductDetailMapper mapper;
 
 	@Override
-	public ProductVO showProductDetail(int prodid) {
+	public ProductVO showProductDetail(int product_id) {
 		
-		return mapper.showProductDetail(prodid);
+		return mapper.showProductDetail(product_id);
+	}
+
+	@Override
+	public List<AuctionVO> getAuctionList(Integer prodid) {
+		// TODO Auto-generated method stub
+		return mapper.getAuctionList(prodid);
+	}
+
+	@Override
+	public int getMaxPrice(Integer prodid) {
+		// TODO Auto-generated method stub
+		return mapper.getMaxPrice(prodid);
 	}
 	
 	
