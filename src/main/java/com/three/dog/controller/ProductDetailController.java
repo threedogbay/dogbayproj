@@ -32,7 +32,7 @@ public class ProductDetailController {
 			List<AuctionVO> auctionVo = productService.getAuctionList(prodid);
 			
 			int maxPrice = productService.getMaxPrice(prodid);
-			
+			System.out.println(vo.toString());
 			model.addAttribute("listAuction", auctionVo);
 			model.addAttribute("product", vo);
 			model.addAttribute("maxPrice", maxPrice);
