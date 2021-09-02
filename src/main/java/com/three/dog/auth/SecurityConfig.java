@@ -45,7 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { //WebSecurity
 												             // hasRole(user or admin) : 특정 권한이 있는 사람만 접근 가능
 			.and() // 로그인 설정
 	          .formLogin()// 로그인에 관한 설정을 의미 로그인 성공시 '/'로 리다이렉트
-	          .loginPage("/user/login")
+	          .loginPage("/")
 	          .loginProcessingUrl("/login")
 	          .defaultSuccessUrl("/index")
 	          

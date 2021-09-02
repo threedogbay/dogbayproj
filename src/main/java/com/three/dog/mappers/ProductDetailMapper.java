@@ -1,4 +1,4 @@
-package com.three.dog.mapper;
+package com.three.dog.mappers;
 
 import java.util.List;
 

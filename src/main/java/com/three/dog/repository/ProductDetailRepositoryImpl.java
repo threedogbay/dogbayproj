@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.three.dog.domain.AuctionVO;
 import com.three.dog.domain.ProductVO;
-import com.three.dog.mapper.ProductDetailMapper;
+import com.three.dog.mappers.ProductDetailMapper;
 
 @Repository
 public class ProductDetailRepositoryImpl implements ProductDetailRepository{

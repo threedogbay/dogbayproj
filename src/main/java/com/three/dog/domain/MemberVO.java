@@ -17,7 +17,7 @@ public class MemberVO implements UserDetails{
 
 	
 	private String member_id;
-	private String member_pw;
+	private String member_pwd;
 	private String member_name;
 	private String auth;
 	
@@ -28,11 +28,11 @@ public class MemberVO implements UserDetails{
 	public void setMember_id(String member_id) {
 		this.member_id = member_id;
 	}
-	public String getMember_pw() {
-		return member_pw;
+	public String getMember_pwd() {
+		return member_pwd;
 	}
-	public void setMember_pw(String member_pwd) {
-		this.member_pw = member_pwd;
+	public void setMember_pwd(String member_pwd) {
+		this.member_pwd = member_pwd;
 	}
 	public String getMember_name() {
 		return member_name;
@@ -55,7 +55,7 @@ public class MemberVO implements UserDetails{
 	}
 	@Override
 	public String getPassword() {
-		return member_pw;
+		return member_pwd;
 	}
 	@Override
 	public String getUsername() {
