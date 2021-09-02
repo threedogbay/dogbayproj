@@ -23,7 +23,7 @@ public class ProductDetailController {
 	@Autowired
 	ProductDetailService productService;
 	
-	@RequestMapping(value = "/product_details", method = RequestMethod.GET)
+	@RequestMapping(value = "afterauth/product_details", method = RequestMethod.GET)
 	public String showProductDetail(Model model, @RequestParam(required = false, defaultValue = "", value = "prodid") Integer prodid) {
 		
 		if(prodid != null) {
@@ -32,7 +32,7 @@ public class ProductDetailController {
 			List<AuctionVO> auctionVo = productService.getAuctionList(prodid);
 			
 			int maxPrice = productService.getMaxPrice(prodid);
-			
+			System.out.println(vo.toString());
 			model.addAttribute("listAuction", auctionVo);
 			model.addAttribute("product", vo);
 			model.addAttribute("maxPrice", maxPrice);
@@ -40,6 +40,6 @@ public class ProductDetailController {
 		}
 		
 		
-		return "product_details";
+		return "afterauth/product_details";
 	}
 }
