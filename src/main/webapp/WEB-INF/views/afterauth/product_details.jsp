@@ -1,4 +1,4 @@
-<%@include file = "layout/header.jsp" %>
+<%@include file = "../layout/header.jsp" %>
 <!doctype html>
 <html lang="zxx">
 <body>
@@ -82,5 +82,5 @@
         <!-- subscribe part end -->
     </main>
     </body>
-<%@include file = "layout/footer.jsp" %>
+<%@include file = "../layout/footer.jsp" %>
 </html>

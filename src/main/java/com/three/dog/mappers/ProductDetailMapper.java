@@ -1,4 +1,4 @@
-package com.three.dog.mapper;
+package com.three.dog.mappers;
 
 import org.apache.ibatis.annotations.Mapper;
 

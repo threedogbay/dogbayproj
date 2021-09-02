@@ -1,4 +1,4 @@
-<%@include file = "layout/header.jsp" %>
+<%@include file = "../layout/header.jsp" %>
 <!doctype html>
 <html lang="zxx">
 <body>
@@ -216,5 +216,5 @@
         <!--================End Checkout Area =================-->
     </main>
 </body>
-<%@include file = "layout/footer.jsp" %>
+<%@include file = "../layout/footer.jsp" %>
 </html>

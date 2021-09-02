@@ -1,4 +1,4 @@
-package com.three.dog.mapper;
+package com.three.dog.mappers;
 
 import org.apache.ibatis.annotations.Mapper;
 
@@ -10,5 +10,5 @@ public interface MemberMapper {
 
 	public void insertMember(MemberVO vo);
 
-	public int idChk(MemberVO vo);
+	public int idChk(String member_id);
 }

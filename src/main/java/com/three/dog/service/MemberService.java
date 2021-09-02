@@ -98,16 +98,14 @@ public class MemberService implements UserDetailsService{
 	}
 	
 	
+	
 	public void signUp(MemberVO vo) throws Exception {
 		vo.setMember_pwd(passwordEncoder.encode(vo.getMember_pwd()));
 		memberRepository.signUp(vo);
 	}
 
-
-	public int idChk(MemberVO vo) throws Exception {
-		int result = memberRepository.idChk(vo);
+	public int idChk(String member_id) throws Exception {
+		int result = memberRepository.idChk(member_id);
 		return result;
 	}
-	
-
 }

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.three.dog.domain.MemberVO;
-import com.three.dog.mapper.MemberMapper;
+import com.three.dog.mappers.MemberMapper;
 
 @Repository
 public class MemberRepository {
@@ -23,8 +23,8 @@ public class MemberRepository {
 	}
 	
 	//아이디 중복체크
-	public int idChk(MemberVO vo) throws Exception {
-		int result = memberMapper.idChk(vo);
+	public int idChk(String member_id) throws Exception {
+		int result = memberMapper.idChk(member_id);
 		return result;
 	}
 

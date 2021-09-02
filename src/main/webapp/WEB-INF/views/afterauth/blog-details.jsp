@@ -1,4 +1,4 @@
-<%@include file = "layout/header.jsp" %>
+<%@include file = "../layout/header.jsp" %>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <body>
@@ -441,5 +441,5 @@
       <!--================ Blog Area end =================-->
    </main>      
 </body>
-<%@include file = "layout/footer.jsp" %>
+<%@include file = "../layout/footer.jsp" %>
 </html>
