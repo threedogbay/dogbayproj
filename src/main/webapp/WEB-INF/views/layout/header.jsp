@@ -36,34 +36,34 @@
 					<div class="menu-wrapper">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="index"><img src="<%=path%>assets/img/logo/logo.png" alt=""></a>
+							<a href="<%=path%>index"><img src="<%=path%>assets/img/logo/logo.png" alt=""></a>
 						</div>
 						<!-- Main-menu -->
 						<div class="main-menu d-none d-lg-block">
 							<nav>
 								<ul id="navigation">
-									<li><a href="index">Home</a></li>
-									<li><a href="shop">shop</a></li>
-									<li><a href="about">about</a></li>
+									<li><a href="<%=path%>index">Home</a></li>
+									<li><a href="<%=path%>shop">shop</a></li>
+									<li><a href="<%=path%>about">about</a></li>
 									<li class="hot"><a href="#">Latest</a>
 										<ul class="submenu">
-											<li><a href="shop"> Product list</a></li>
-											<li><a href="product_details"> Product Details</a></li>
+											<li><a href="<%=path%>shop"> Product list</a></li>
+											<li><a href="<%=path%>afterauth/product_details"> Product Details</a></li>
 										</ul></li>
-									<li><a href="blog">Blog</a>
+									<li><a href="<%=path%>blog">Blog</a>
 										<ul class="submenu">
-											<li><a href="blog">Blog</a></li>
-											<li><a href="blog-details">Blog Details</a></li>
+											<li><a href="<%=path%>blog">Blog</a></li>
+											<li><a href="<%=path%>blog-details">Blog Details</a></li>
 										</ul></li>
 									<li><a href="#">Pages</a>
 										<ul class="submenu">
-											<li><a href="login">Login</a></li>
-											<li><a href="cart">Cart</a></li>
-											<li><a href="elements">Element</a></li>
-											<li><a href="confirmation">Confirmation</a></li>
-											<li><a href="checkout">Product Checkout</a></li>
+											<li><a href="<%=path%>login">Login</a></li>
+											<li><a href="<%=path%>cart">Cart</a></li>
+											<li><a href="<%=path%>elements">Element</a></li>
+											<li><a href="<%=path%>confirmation">Confirmation</a></li>
+											<li><a href="<%=path%>checkout">Product Checkout</a></li>
 										</ul></li>
-									<li><a href="contact">Contact</a></li>
+									<li><a href="<%=path%>contact">Contact</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -75,8 +75,8 @@
 										<span class="flaticon-search"></span>
 									</div>
 								</li>
-								<li><a href="login"><span class="flaticon-user"></span></a></li>
-								<li><a href="cart"><span class="flaticon-shopping-cart"></span></a>
+								<li><a href="<%=path%>login"><span class="flaticon-user"></span></a></li>
+								<li><a href="<%=path%>cart"><span class="flaticon-shopping-cart"></span></a>
 								</li>
 							</ul>
 						</div>
