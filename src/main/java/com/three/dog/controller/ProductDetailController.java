@@ -40,6 +40,6 @@ public class ProductDetailController {
 		}
 		
 		
-		return "product_details";
+		return "afterauth/product_details";
 	}
 }
