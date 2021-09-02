@@ -11,5 +11,7 @@ public interface ProductDetailService {
 
 	public List<AuctionVO> getAuctionList(Integer prodid);
 
+	public int getMaxPrice(Integer prodid);
+
 	
 }

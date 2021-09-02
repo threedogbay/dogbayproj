@@ -27,6 +27,12 @@ public class ProductDetailServiceImpl implements ProductDetailService {
 		
 		return productDAO.getAuctionList(prodid);
 	}
+
+	@Override
+	public int getMaxPrice(Integer prodid) {
+		// TODO Auto-generated method stub
+		return productDAO.getMaxPrice(prodid);
+	}
 	
 	
 }

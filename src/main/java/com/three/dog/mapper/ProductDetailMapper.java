@@ -13,4 +13,6 @@ public interface ProductDetailMapper {
 	ProductVO showProductDetail(int prodid);
 
 	List<AuctionVO> getAuctionList(Integer prodid);
+
+	int getMaxPrice(Integer prodid);
 }

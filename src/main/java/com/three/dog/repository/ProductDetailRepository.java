@@ -11,4 +11,6 @@ public interface ProductDetailRepository {
 
 	List<AuctionVO> getAuctionList(Integer prodid);
 
+	int getMaxPrice(Integer prodid);
+
 }

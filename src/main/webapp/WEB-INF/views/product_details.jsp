@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="layout/header.jsp"%>
 <!doctype html>
 <html lang="zxx">
@@ -41,21 +42,23 @@
 					</div>
 					<div class="col-lg-8">
 						<div class="single_product_text text-center">
-							<h3>제품명</h3>
+							<h3>${product.product_name }</h3>
 
-							<p>제품 설명이 어쩌구 저쩌구</p>
+							<p>${product.product_detail }</p>
 							<img alt=""
 								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Black_Pink_logo_%282%29.png/300px-Black_Pink_logo_%282%29.png">
 							<div class="card_area">
 								<div class="product_count_area">
-									<p>입찰금액</p>
+								<c:if test="${maxPrice != 0}">
+									<p>${maxPrice }</p>
+								</c:if>
+								<c:if test="${maxPrice == 0 }">
+									${product.product_initprice}
+								</c:if>
 									<div class="product_count d-inline-block">
-										<span class="product_count_item inumber-decrement"> <i
-											class="ti-minus"></i></span> <input
-											class="product_count_item input-number" type="text" value="1"
-											min="0" max="10"> <span
-											class="product_count_item number-increment"> <i
-											class="ti-plus"></i></span>
+										<span class="product_count_item inumber-decrement"> <i class="ti-minus"></i></span> 
+										<input class="product_count_item input-number" type="text" value="1"	min="0" max="10"> 
+										<span class="product_count_item number-increment"> <i class="ti-plus"></i></span>
 									</div>
 
 								</div>
@@ -73,21 +76,13 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>John</td>
-										<td>Doe</td>
-										<td>john@example.com</td>
-									</tr>
-									<tr>
-										<td>Mary</td>
-										<td>Moe</td>
-										<td>mary@example.com</td>
-									</tr>
-									<tr>
-										<td>July</td>
-										<td>Dooley</td>
-										<td>july@example.com</td>
-									</tr>
+									<c:forEach var="listAuction" items="${listAuction }">
+										<tr>
+											<td>${listAuction.member_id }</td>
+											<td>${listAuction.auction_price }</td>
+											<td>${listAuction.auction_time }</td>
+										</tr>
+									</c:forEach>
 								</tbody>
 							</table>
 						</div>
