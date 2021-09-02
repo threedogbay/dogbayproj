@@ -23,7 +23,7 @@ public class ProductDetailController {
 	@Autowired
 	ProductDetailService productService;
 	
-	@RequestMapping(value = "/product_details", method = RequestMethod.GET)
+	@RequestMapping(value = "afterauth/product_details", method = RequestMethod.GET)
 	public String showProductDetail(Model model, @RequestParam(required = false, defaultValue = "", value = "prodid") Integer prodid) {
 		
 		if(prodid != null) {
