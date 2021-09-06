@@ -1,6 +1,7 @@
 <%@include file = "../layout/header.jsp" %>
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <body>
     <!--? Preloader Start -->
     <div id="preloader-active">
@@ -39,7 +40,13 @@
                         <h2 class="contact-title">Get in Touch</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="/payment/customerInfo" method="post" >
+                        	<input type="hidden" name="memberId" value="12" />
+                        	<input type="hidden" name="auctionId" value="22" />
+                        	<input type="hidden" name="productId" value="11" />
+                        	<input type="hidden" name="paymentType" value="154" />
+                        	<input type="hidden" name="paymentStatus" value="3333" />
+                        	
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
@@ -99,7 +106,7 @@
                                
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                                <button type="submit" id="send" class="button button-contactForm boxed-btn">Send</button>
                             </div>
                         </form>
                     </div>
