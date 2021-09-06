@@ -61,11 +61,16 @@ CREATE TABLE `threedog`.`product` (
 
 -- product insert test
 INSERT INTO `threedog`.`product` (`product_id`, `product_name`, `product_initprice`, `product_closedate`, `product_regidate`, `product_img`, `product_detail`) VALUES ('1', 'test', '1000', '2020-08-08', '2020-08-08', 'test', 'test');
+
+-- payment alter 
+ALTER TABLE `threedog`.`payment` 
+CHANGE COLUMN `payment_id` `payment_id` INT NOT NULL AUTO_INCREMENT ;
+
 ```
 
 #application.properties
 ```
-server.port=8082
+server.port=
 server.servlet.context-path=/
 
 #jsp
@@ -73,10 +78,10 @@ spring.mvc.view.prefix=/WEB-INF/views/
 spring.mvc.view.suffix=.jsp
 
 #mysql 
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.datasource.url=jdbc:mysql://localhost:3306/threedog?serverTimeZone=UTC&CharacterEncoding=UTF-8
-spring.datasource.username=root
-spring.datasource.password=1234
+spring.datasource.driver-class-name=
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
 mybatis.mapper-locations:classpath:mapper/*.xml
 
 server.servlet.encoding.charset=utf-8
