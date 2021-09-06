@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.three.dog.mappers.ProductDetailMapper">
+	
+	<select id="showProductDetail" resultType="com.three.dog.domain.ProductVO">
+		SELECT
+			product_id
+		FROM
+			product
+		WHERE
+			product_id = #{product_id}
+	</select>
+	<select id="getAuctionList" resultType="com.three.dog.domain.AuctionVO">
+		SELECT
+			*
+		FROM
+			AUCTION
+		WHERE
+			PRODUCT_ID = #{product_id}
+	</select>
+	<select id="getMaxPrice" resultType="int">
+	select
+		ifnull(max(auction_price), 0) 
+	from 
+		auction 
+	where 
+		product_id = #{product_id}
+	</select>
+</mapper> 
