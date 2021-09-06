@@ -6,7 +6,7 @@ import com.three.dog.domain.MemberVO;
 
 @Mapper
 public interface MemberMapper {
-	MemberVO selectMembers(String memberid);
+	MemberVO selectMember(String member_id);
 
 	public void insertMember(MemberVO vo);
 

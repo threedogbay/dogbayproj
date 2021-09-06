@@ -65,7 +65,7 @@ INSERT INTO `threedog`.`product` (`product_id`, `product_name`, `product_initpri
 
 #application.properties
 ```
-server.port=8082
+server.port=8085
 server.servlet.context-path=/
 
 #jsp

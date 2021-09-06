@@ -45,23 +45,29 @@ public class MemberService implements UserDetailsService{
 	   * @return UserDetails
 	   * @throws UsernameNotFoundException 유저가 없을 때 예외 발생
 	   */
+	
 
 	@Override // 기본적인 반환 타입은 UserDetails, UserDetails를 상속받은 UserVO로 반환 타입 지정 (자동으로 다운 캐스팅됨)
-	public UserDetails loadUserByUsername(String memberid) throws UsernameNotFoundException {
+	public UserDetails loadUserByUsername(String member_id) throws UsernameNotFoundException {
 		// 시큐리티에서 지정한 서비스이기 때문에 이 메소드를 필수로 구현
 		log.info("## loadUserByUsername ##");
 		
-		MemberVO members = null;
+		MemberVO member;
 		try {
-			members = memberRepository.selectId(memberid);
+			member = memberRepository.selectMember(member_id);
+			
+			List<GrantedAuthority> authorities = new ArrayList<>();
+			authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+			
+			return new User(member.getMember_id(), member.getMember_pwd(), authorities);
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		List<GrantedAuthority> authorities = new ArrayList<>();
-		authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+		return null;
 		
-		return new User(members.getMember_id(), members.getMember_pwd(), authorities);
+		
 
 //		MemberVO2 securityUser = new MemberVO2();
 //				

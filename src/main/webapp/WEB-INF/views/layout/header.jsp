@@ -24,7 +24,6 @@
 <link rel="stylesheet" href="<%=path%>assets/css/slick.css">
 <link rel="stylesheet" href="<%=path%>assets/css/nice-select.css">
 <link rel="stylesheet" href="<%=path%>assets/css/style.css">
-<link rel="stylesheet" href="<%=path%>assets/css/signStyle.css">
 
 </head>
 <body>
@@ -42,28 +41,28 @@
 						<div class="main-menu d-none d-lg-block">
 							<nav>
 								<ul id="navigation">
-									<li><a href="index">Home</a></li>
-									<li><a href="shop">shop</a></li>
-									<li><a href="about">about</a></li>
+									<li><a href="afterauth/index">Home</a></li>
+									<li><a href="afterauth/shop">shop</a></li>
+									<li><a href="afterauth/about">about</a></li>
 									<li class="hot"><a href="#">Latest</a>
 										<ul class="submenu">
-											<li><a href="shop"> Product list</a></li>
-											<li><a href="product_details"> Product Details</a></li>
+											<li><a href="afterauth/shop"> Product list</a></li>
+											<li><a href="afterauth/product_details"> Product Details</a></li>
 										</ul></li>
-									<li><a href="blog">Blog</a>
+									<li><a href="afterauth/blog">Blog</a>
 										<ul class="submenu">
-											<li><a href="blog">Blog</a></li>
-											<li><a href="blog-details">Blog Details</a></li>
+											<li><a href="afterauth/blog">Blog</a></li>
+											<li><a href="afterauth/blog-details">Blog Details</a></li>
 										</ul></li>
 									<li><a href="#">Pages</a>
 										<ul class="submenu">
-											<li><a href="login">Login</a></li>
-											<li><a href="cart">Cart</a></li>
-											<li><a href="elements">Element</a></li>
-											<li><a href="confirmation">Confirmation</a></li>
-											<li><a href="checkout">Product Checkout</a></li>
+											<li><a href="afterauth/login">Login</a></li>
+											<li><a href="afterauth/cart">Cart</a></li>
+											<li><a href="afterauth/elements">Element</a></li>
+											<li><a href="afterauth/confirmation">Confirmation</a></li>
+											<li><a href="afterauth/checkout">Product Checkout</a></li>
 										</ul></li>
-									<li><a href="contact">Contact</a></li>
+									<li><a href="afterauth/contact">Contact</a></li>
 								</ul>
 							</nav>
 						</div>

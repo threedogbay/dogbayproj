@@ -2,26 +2,18 @@ package com.three.dog.domain;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
 public class MemberVO implements UserDetails{
 
-	
 	private String member_id;
 	private String member_pwd;
 	private String member_name;
 	private String auth;
-	
-	
+
 	public String getMember_id() {
 		return member_id;
 	}
@@ -77,4 +69,5 @@ public class MemberVO implements UserDetails{
 	public boolean isEnabled() { //계정 사용 가능 여부 반환
 		return true; // true -> 사용가능
 	}
+	
 }

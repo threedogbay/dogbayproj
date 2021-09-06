@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *
 {
     margin: 0;
@@ -10,7 +10,7 @@ section
 {
     position:relative;
     min-height: 100vh;
-    background: #557085;
+    background: rgb(198, 219, 202);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@ section
 
 section.active
 {
-    background: #55855f;
+    background: rgb(198, 219, 202);
 }
 
 section .container
@@ -96,6 +96,36 @@ section .container .user .formBx input
     letter-spacing: 1px;
     font-weight: 300;
 }
+section .container .user .formBx #SignUp #member_id
+{
+	width:70%;
+    padding: 10px;
+    background: #f5f5f5;
+    color: #333;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    margin: 8px 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+section .container .user .formBx #SignUp #idChk
+{
+	width:28%;
+    padding: 10px;
+    background: #e73e49;
+    color: #333;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    margin: 8px 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
 section .container .user .formBx input[type="submit"]
 {
     max-width: 100px;

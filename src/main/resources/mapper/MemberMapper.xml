@@ -5,7 +5,7 @@
 
 <mapper namespace="com.three.dog.mappers.MemberMapper"><!-- com.three.dog.repository namespace를 통해 MemberDAO와 연결 -->
   		
-  <select id="selectMembers" parameterType="String" resultType="com.three.dog.domain.MemberVO"><!-- selectUsers()메서드를 호출하면 실행할 SELECT문이며, 
+  <select id="selectMember" parameterType="String" resultType="com.three.dog.domain.MemberVO"><!-- selectUsers()메서드를 호출하면 실행할 SELECT문이며, 
 																												UserDTO 객체를 파라미터로 받아, UserDTO객체를 반환합니다.-->
   	SELECT member_id, member_pwd, auth as member_auth
     FROM Member

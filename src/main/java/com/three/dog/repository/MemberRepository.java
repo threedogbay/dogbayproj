@@ -13,8 +13,8 @@ public class MemberRepository {
 	private MemberMapper memberMapper;
 	
 	//로그인
-	public MemberVO selectId(String memberid) throws Exception {
-		return memberMapper.selectMembers(memberid);
+	public MemberVO selectMember(String member_id) throws Exception {
+		return memberMapper.selectMember(member_id);
 	}
 
 	//회원가입
