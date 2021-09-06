@@ -38,7 +38,7 @@ public class ProductDetailController {
 			model.addAttribute("maxPrice", maxPrice);
 			System.out.println(vo.toString());
 		}
-		
+		//test
 		
 		return "afterauth/product_details";
 	}
