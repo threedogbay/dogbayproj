@@ -3,6 +3,25 @@
 <%@include file="../layout/header.jsp"%>
 <!doctype html>
 <html lang="zxx">
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+		var itemPrice = $("#itemPrice").text();
+		var itemPriceLength = itemPrice.length;
+		console.log(itemPriceLength);
+		
+		var divide10 = 10 ** (itemPriceLength-1);
+		
+		var auctionPercent = parseInt(itemPrice / divide10) * 0.05
+		console.log(auctionPercent);
+		
+		var auctionBid = auctionPercent * divide10;
+		var total = Number(itemPrice) + Number(auctionBid);
+		$("#auctionBid").html(total + "원에 입찰하기");
+	});
+	
+	
+</script>
 <body>
 	<main>
 		<!-- Hero Area Start-->
@@ -50,10 +69,10 @@
 							<div class="card_area">
 								<div class="product_count_area">
 								<c:if test="${maxPrice != 0}">
-									<p>${maxPrice }</p>
+									<p id="itemPrice">${maxPrice }</p>
 								</c:if>
 								<c:if test="${maxPrice == 0 }">
-									${product.product_initprice}
+									<p id="itemPrice">${product.product_initprice}</p>
 								</c:if>
 									<div class="product_count d-inline-block">
 										<span class="product_count_item inumber-decrement"> <i class="ti-minus"></i></span> 
@@ -62,9 +81,9 @@
 									</div>
 
 								</div>
-								<p>x,xxx원 이상 입찰 가능</p>
+								<p id="auctionBid">x,xxx원 이상 입찰 가능</p>
 								<div class="add_to_cart">
-									<a href="#" class="btn_3">입찰하기</a>
+									<a href="#" class="btn_3" id="auction">입찰하기</a>
 								</div>
 							</div>
 							<table class="table table-striped" style="margin-top: 10px;">
