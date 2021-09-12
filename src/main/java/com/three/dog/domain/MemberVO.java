@@ -77,4 +77,11 @@ public class MemberVO implements UserDetails{
 	public boolean isEnabled() { //계정 사용 가능 여부 반환
 		return true; // true -> 사용가능
 	}
+	@Override
+	public String toString() {
+		return "MemberVO [member_id=" + member_id + ", member_pwd=" + member_pwd + ", member_name=" + member_name
+				+ ", auth=" + auth + "]";
+	}
+	
+	
 }
